@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterviewSim</title>
+</head>
+<body style="background-color:rgb(159, 198, 242)">
+    <div>
+        <center>
+        <img src=https://cdn.pixabay.com/photo/2015/11/02/12/31/interview-1018333__340.png alt="what image shows" height="150" width="200">
+    <h1>InterviewSim</h1>
+        <p style="font-family:Courier New">InterviewSim is a platform that allows users to run through an infinite number of mock interviews. Our goal is to help you hone your interview skills so that the next time you have an interview, you will think of it as a piece of cake.<em><h3><p>
+        </center>
+    </div>
+    <div>
+        <p id = "prompts" style="font-family:Courier New ;font-size:20;"> Tell me about yourself. </p>
+            <input id = "a" name = "a" type="radio" value = "0">A</input>
+            <p id = "aText">Well, I’m currently an account executive at Smith, where I handle our top-performing client. Before that, I worked at an agency where I was on three different major national healthcare brands. And while I really enjoyed the work that I did, I’d love the chance to dig in much deeper with one specific healthcare company, which is why I’m so excited about this opportunity with Metro Health Center. </p>
+            <input id = "b"name = "b" type="radio" value = "1">B</input>
+            <p id = "bText">Well, I am currently living in an apartment about thirty minutes away. I enjoy talking walks and playing minigolf. I’m really excited about this job opportunity. I have had experience in this field before but just very briefly.</p>
+            <input id = "c"name = "c" type="radio" value = "2">C</input>
+            <p id = "cText">I have two brothers and a sister. I'm the youngers of all of them and i’m the first person in my family to go to college. Some things I spend my free time doing is playing video games and watching youtube videos.</p>
+            <input id = "d"name = "d" type="radio" value = "3">D</input>
+            <p id = "dText">I have gone to school for 4 years and changed my major 4 times. I find that I’m really good at doing this type of jobs. So, i’m really hoping i can get this job because I’m really excited for it. During college I made many new friends so I believe my communication skills are great. I know that I will be a good team worker and get along with everyone.</p>
+            <button onClick = "sceneNum1()" id = "submit"> SUBMIT</button>
+            <p>.                                                                                         </p>
+    </div
+        </body>
+</html>
+
+
+<script type="text/javascript"> 
+function sceneNum1() {
+    var leta = document.getElementById("a");
+    var letb = document.getElementById("b");
+    var letc = document.getElementById("c");
+    var letd = document.getElementById("d");
+    if(leta.checked == true) {
+        document.getElementById("prompts").innerHTML = "Correct!" + "\n" + " Why do you want to work for this company?";
+        document.getElementById("submit").onClick = sceneNum2();
+    }
+    else { 
+        document.getElementById("prompts").innerHTML = "Incorrect, Answer was A" + "\n" + " Why do you want to work for this company?";
+        document.getElementById("submit").onClick = sceneNum2();
+    }
+    document.getElementById("aText").innerHTML = "I was looking for jobs opportunities now that I’m out of college so I sent out my resume to multiple companies. So, getting this interview was a major deal for me. I hope I can get the job.";
+    document.getElementById("bText").innerHTML = "It was the closest company to where I’m living currently so when I saw a position opened I applied.";
+    document.getElementById("cText").innerHTML = "My goal is to gain experience for future job opportunities. So, I feel like this company is a great way to build up my resume. I also know that I have the knowledge to be able to be successful in this company. I also find that your goals for the company are something that I would like to be apart of.";
+    document.getElementById("dText").innerHTML = "I saw on The Muse that you were also hiring for new positions on the West Coast to support your new operations there. I did some more reading about the new data center you’re building there and that excites me as I know this means there’ll be opportunities to train new teammates. I also learned through a Wall Street Journal article that you’re expanding in Mexico as well. I speak Spanish fluently and would be eager to step up and help liaise whenever necessary.";
+    document.getElementById("submit").onClick = sceneNum2();
+}
+function sceneNum2() {
+    var leta = document.getElementById("a");
+    var letb = document.getElementById("b");
+    var letc = document.getElementById("c");
+    var letd = document.getElementById("d");
+    if(letd.checked == true) {
+        document.getElementById("prompts").innerHTML = "Correct!" + "\n" + " Why are you leaving your current job?";
+        document.getElementById("submit").onClick = sceneNum3();
+    } 
+    else {
+        document.getElementById("prompts").innerHTML = "Incorrect, Answer was D" + "\n" + " Why are you leaving your current job?";
+        document.getElementById("submit").onClick = sceneNum3();
+    }
+    document.getElementById("aText").innerHTML = "The manager at my last job was horrible that made the work environment hard. Most of my coworkers were suck up and came from rich families. So, I was really unhappy working there and I made the choice to leave my current job";
+    document.getElementById("bText").innerHTML = "I’m ready for the next challenge in my career. I loved the people I worked with and the projects I worked on, but at some point I realized I wasn’t being challenged the way I used to be. Rather than let myself get too comfortable, I decided to pursue a position where I can continue to grow.";
+    document.getElementById("cText").innerHTML = "I didn’t feel I was getting the right reconginision that I should have. I have graduated from an Ivy League school and I was the top of my class. I was treated the way I should have because of everything I’ve done.";
+    document.getElementById("dText").innerHTML = "Currently my job isn’t giving pay raises like other jobs in this field so I now I have to find a new job that will pay me more. I just find it unfair that people are geeting payed when barley going in while I have a year in my old job. This job starts with a higher starting salary then I’m being payed currently.";
+}
+function sceneNum3() {
+    var leta = document.getElementById("a");
+    var letb = document.getElementById("b");
+    var letc = document.getElementById("c");
+    var letd = document.getElementById("d");
+    if(letd.checked == true) {
+        document.getElementById("prompts").innerHTML = "Correct!" + "\n" + " Are you planning on having kids?";
+    } 
+    else {
+        document.getElementById("prompts").innerHTML = "Incorrect, Answer was B" + "\n" + " Are you planning on having kids?";
+    }
+    document.getElementById("aText").innerHTML = "You know, I’m not quite there yet. But I am very interested in the career paths at your company. Can you tell me more about that?";
+    document.getElementById("bText").innerHTML = "Yeah I’m planning to have a couple kids expectantly since I just got married. It has also been something that has been my since I was a kid.";
+    document.getElementById("cText").innerHTML = "I actually currently have one kid and I’m planning on having more in the near future as I don’t want them to have a huge age gap.";
+    document.getElementById("dText").innerHTML = "Why am I being asked that question. Its illegal to ask that ask that question in interviews.";
+    document.getElementById("submit").onClick = sceneNum4();
+}
+function sceneNum4() {
+    var leta = document.getElementById("a");
+    var letb = document.getElementById("b");
+    var letc = document.getElementById("c");
+    var letd = document.getElementById("d");
+    if(letd.checked == true) {
+        document.getElementById("prompts").innerHTML = "Correct!" + "\n" + " Why are you leaving your current job?";
+    } 
+    else {
+        document.getElementById("prompts").innerHTML = "Incorrect, Answer was A" + "\n" + " Why are you leaving your current job?";
+    }
+    document.getElementById("aText").innerHTML = "Yes";
+    document.getElementById("bText").innerHTML = "Yes";
+    document.getElementById("cText").innerHTML = "Yes";
+    document.getElementById("dText").innerHTML = "uhhh no?? can i leave? im gonna call the cops";
+    document.getElementById("submit").onClick = sceneNum5(); 
+}
+function sceneNum5() {
+    var leta = document.getElementById("a");
+    var letb = document.getElementById("b");
+    var letc = document.getElementById("c");
+    var letd = document.getElementById("d");
+    if(letd.checked == true) {
+        document.getElementById("prompts").innerHTML = "im going to FUCKING SHOOT you";
+    } 
+    else {
+        document.getElementById("prompts").innerHTML = "Perfect :D";
+    }
+}
+</script>
